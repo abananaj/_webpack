@@ -1,2 +1,0 @@
-course: https://www.youtube.com/watch?v=3On5Z0gjf4U&list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8
-notion: https://www.notion.so/theatrum/webpack-20bf07d053678135a697e106d3666c79?source=copy_link
