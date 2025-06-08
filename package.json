@@ -2,9 +2,9 @@
   "name": "webpack_demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
-    "start": "webpack",
+    "start": "webpack --config webpack.config.js --mode development",
     "build": "webpack -w --mode production",
     "serve": "webpack-dev-server --mode development"
   },
