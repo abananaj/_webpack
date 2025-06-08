@@ -15,16 +15,19 @@ module.exports = {
     }
 
   },
-      resolve: {
-      extensions: ['.scss', '.js'],
-    },
     module: {
       rules: [
         {
-          test: /\.scss$/,
-          include: path.resolve(__dirname, './development/index.scss'),
+           test: /\.s[ac]ss$/i,
+          exclude: path.resolve(__dirname, './node_modules'),
           use: ['style-loader', 'css-loader', 'sass-loader']
         }
       ]
-    }
+  },
+  ignoreWarnings: [
+    {
+        module: /node_modules/
+      }
+    ]
+    
 }
