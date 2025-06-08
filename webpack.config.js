@@ -1,32 +1,30 @@
 const path = require('path');
-const Webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
 
 module.exports = {
-    mode: 'development',
-    entry: path.resolve(__dirname, './development/index.js'),
-    devtool: "eval-source-map",
-    output: {
-        publicPath: 'production',
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, './production'),
-    },
-    devServer: {
-        static: path.resolve(__dirname, './production'),
-        liveReload: true,
-        devMiddleware: {
-            publicPath: '/'
-        }
-    },
-    resolve: {
-        extensions: ['.scss', '.css', '.js'],
+  mode: 'development',
+  entry: './development/index.js',
+  output: {
+    path: path.resolve(__dirname, 'production'),
+    filename: 'bundle.js',
+  },
+  devServer: {
+    static: path.resolve(__dirname, './production'),
+    liveReload: true,
+    devMiddleware: {
+      publicPath: '/'
+    }
+
+  },
+      resolve: {
+      extensions: ['.scss', '.js'],
     },
     module: {
-        rules: [
-            {
-                test: /\.(scss)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
-            }
-        ]
+      rules: [
+        {
+          test: /\.scss$/,
+          include: path.resolve(__dirname, './development/index.scss'),
+          use: ['style-loader', 'css-loader', 'sass-loader']
+        }
+      ]
     }
-};
+}
