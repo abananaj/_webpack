@@ -7,19 +7,24 @@ module.exports = {
     path: path.resolve(__dirname, 'production'),
     filename: 'bundle.js',
   },
-      devServer: {
-        static: path.resolve(__dirname, './production'),
-        liveReload: true,
-        devMiddleware: {
-            publicPath: '/'
-        },
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        include: 
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      }
-    ]
-  }
-};
+  devServer: {
+    static: path.resolve(__dirname, './production'),
+    liveReload: true,
+    devMiddleware: {
+      publicPath: '/'
+    }
+
+  },
+      resolve: {
+      extensions: ['.scss', '.js'],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.scss$/,
+          include: path.resolve(__dirname, './development/index.scss'),
+          use: ['style-loader', 'css-loader', 'sass-loader']
+        }
+      ]
+    }
+}
