@@ -4,15 +4,15 @@ const WebpackDevServer = require('webpack-dev-server');
 
 module.exports = {
     mode: 'development',
-    devtool: 'eval-source-map',
-    entry: './development/index.css',
+    entry: path.resolve(__dirname, './development/index.js'),
+    devtool: "eval-source-map",
     output: {
         publicPath: 'production',
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'production'),
+        path: path.resolve(__dirname, './production'),
     },
     devServer: {
-        static: path.resolve(__dirname, 'production'),
+        static: path.resolve(__dirname, './production'),
         liveReload: true,
         devMiddleware: {
             publicPath: '/'
