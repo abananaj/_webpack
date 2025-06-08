@@ -7,6 +7,12 @@ module.exports = {
     path: path.resolve(__dirname, 'production'),
     filename: 'bundle.js',
   },
+      devServer: {
+        static: path.resolve(__dirname, './production'),
+        liveReload: true,
+        devMiddleware: {
+            publicPath: '/'
+        },
   module: {
     rules: [
       {
