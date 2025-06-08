@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(223, 19, 179);
+}
+ul {
+  background: red;
+  padding: 10px;
+  li {
+    background: orange;
+    padding: 10px;
+  }
+}
+nav {
+  ul {
+    background: blue;
+    padding: 10px;
+    li {
+      background: skyblue;
+      padding: 10px;
+    }
+  }
+}
