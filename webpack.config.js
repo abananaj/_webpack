@@ -5,7 +5,7 @@ const WebpackDevServer = require('webpack-dev-server');
 module.exports = {
     mode: 'development',
     devtool: 'eval-source-map',
-    entry: './development/index.ts',
+    entry: './development/index.css',
     output: {
         publicPath: 'production',
         filename: 'bundle.js',
@@ -13,36 +13,20 @@ module.exports = {
     },
     devServer: {
         static: path.resolve(__dirname, 'production'),
+        liveReload: true,
+        devMiddleware: {
+            publicPath: '/'
+        }
     },
     resolve: {
-        extensions: ['.ts', '.js'],
+        extensions: ['.css', '.js'],
     },
     module: {
-        rules:
-            [{
-                test: /\.ts$/,
-                exclude: /node_modules/,
-                use: 'ts-loader',
-            },
+        rules: [
             {
-                test: /\.scss$/,
-                exclude: /node_modules/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-                // {
-                //     test: /\.js$/,
-                //     exclude: /node_modules/,
-                //     use: {
-                //         loader: 'babel-loader',
-                //         options: {
-                //             presets: ['@babel/preset-env']
-                //         }
-                //     }
-                // }
-            ]
+                test: /\.(css)$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
     }
 };
