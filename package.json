@@ -1,18 +1,28 @@
 {
-  "name": "webpack-template",
+  "name": "webpack_demo",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
-  "author": "",
-  "main": "index.js",
+  "main": "bundle.js",
   "scripts": {
+    "start": "webpack --config webpack.config.js --mode development",
     "build": "webpack -w --mode production",
     "serve": "webpack-dev-server --mode development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abananaj/_webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abananaj/_webpack/issues"
+  },
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
-  },
-  "keywords": []
+  }
 }

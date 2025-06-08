@@ -1,3 +1,6 @@
-import "./index.scss";
+console.log('hello from index.js');
 
-console.log('index.js says hi');
+import { testModule } from "./scripts/test-module";
+import "./styles/index.css";
+
+console.log(testModule);
