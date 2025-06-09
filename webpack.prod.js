@@ -8,7 +8,8 @@ module.exports = merge(common, {
     output: {
         filename: "bundle.[contenthash].js",
         path: path.resolve(__dirname, "production"),
-        assetModuleFilename: "media/[name].[hash][ext][query]"
+        assetModuleFilename: "media/[name].[hash][ext][query]",
+        clean: true,
     },
     optimization: {
         realContentHash: true,
