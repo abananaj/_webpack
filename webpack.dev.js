@@ -19,16 +19,7 @@ module.exports = merge(config, {
         }
     },
     module: {
-        rules: [
-            {
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
-                ]
-            },
-        ]
+        rules: [ ]
     },
     ignoreWarnings: [{ module: /node_modules/ }]
 });

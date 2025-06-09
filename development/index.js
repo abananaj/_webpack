@@ -5,4 +5,12 @@ import "./index.scss";
 
 console.log(testModule);
 
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+const hello = () => {
+    console.log('babel arrow function test');
+};
+
+hello();
+
+[1, 2, 3].map(n => n + 1);
+
+// import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
