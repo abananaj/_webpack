@@ -1,4 +1,2 @@
-node_modules/
+node_modules/**
 production/**
-production/index.html
-production/bundle.js
