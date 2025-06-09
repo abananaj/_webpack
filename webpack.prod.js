@@ -1,12 +1,12 @@
 const path = require('path');
 const { merge } = require("webpack-merge");
-const common = require("./webpack.config");
+const config = require("./webpack.config");
 const TerserPlugin = require('terser-webpack-plugin');
 
-module.exports = merge(common, {
+module.exports = merge(config, {
     mode: 'production',
     output: {
-        filename: "[name].bundle.[contenthash].js",
+        filename: "bundle.[contenthash].js",
         path: path.resolve(__dirname, "production"),
         assetModuleFilename: "media/[name].[hash][ext][query]",
         clean: true,

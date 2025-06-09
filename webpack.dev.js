@@ -1,11 +1,11 @@
 const path = require("path");
 const { merge } = require("webpack-merge");
-const common = require("./webpack.config");
+const config = require("./webpack.config");
 
-module.exports = merge(common, {
+module.exports = merge(config, {
     mode: 'development',
     output: {
-        filename: "[name].bundle.js",
+        filename: "bundle.js",
         path: path.resolve(__dirname, "production"),
         assetModuleFilename: "media/[name][ext][query]"
     },
@@ -17,5 +17,4 @@ module.exports = merge(common, {
         }
     },
     ignoreWarnings: [ { module: /node_modules/ }   ]
-
 });
