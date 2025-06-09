@@ -5,7 +5,7 @@ const common = require("./webpack.config");
 module.exports = merge(common, {
     mode: 'development',
     output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "production"),
         assetModuleFilename: "media/[name][ext][query]"
     },
