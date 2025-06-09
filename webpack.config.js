@@ -1,13 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./development/index.js",
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+    new HtmlWebpackPlugin({
     template: "./development/template.html",
     scriptLoading: "module",
     inject: "body"
-  })],
+  }),
+    new CleanWebpackPlugin()
+  ],
   module: {
     rules: [
       {
