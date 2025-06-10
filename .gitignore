@@ -1,2 +1,4 @@
-node_modules/**
-production/**
+node_modules/
+*.log
+*.ini
+production/
